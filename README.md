@@ -1,6 +1,5 @@
 ### The App
-Web application that shows a web form to collect some data from a user before signing up for a service - see screenshots below
-
+Web application that shows a web form to collect some data from a user before signing up for a service 
 ### Demo
 [Here!](https://www.youtube.com/watch?v=QzSKVSNKPkY&t=8s) 
 
