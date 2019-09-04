@@ -27,7 +27,7 @@ The program:
 - jest-enzyme
 
 ### Instructions
-Clone the project https://github.com/manonja/tray-fe-test
+Clone the project https://github.com/manonja/trayio-fe-test
 
 In your terminal, go to `tray-fe-test`
 - run `npm install` to install all the dependencies
