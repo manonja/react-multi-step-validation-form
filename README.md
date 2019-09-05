@@ -1,5 +1,6 @@
 ### The App
-Web application that shows a web form to collect some data from a user before signing up for a service 
+Web application that shows a web form to collect some data from a user before signing up for a service.
+
 ### Demo
 [Here!](https://www.youtube.com/watch?v=QzSKVSNKPkY&t=8s) 
 
@@ -13,17 +14,20 @@ The program:
 
 ### Technical details
 - Front-end built with **React**.
-- Styling with **CSS** and **Material UI**.
+- Styling with **CSS**.
 - Testing with **Enzyme** and **Jest**. 
 
 ### Packages installed
-# UI
+#### UI
 - react-icons
-# Testing
+#### Testing
 - enzyme 
 - enzyme-adapter-react-16 
 - react-test-renderer
 - jest-enzyme
+- babel-jest
+- @babel/preset-env
+- @babel/preset-react
 
 ### Instructions
 Clone the project https://github.com/manonja/trayio-fe-test
