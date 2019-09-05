@@ -1,19 +1,8 @@
 import React, { Component } from 'react'
 export class PrivacyDetails extends Component {
-  // Go to the next page on submit
-  continue = e => {
-    e.preventDefault()
-    this.props.nextStep()
-  }
-
-  // Go back to the previous page 
-  previous = e => {
-    e.preventDefault()
-    this.props.prevStep()
-  }
-
+ 
   render() {
-    const {handlePrivacy, comTrayProduct, comOtherProducts} = this.props
+    const {handlePrivacy, comTrayProduct, comOtherProducts, nextStep, prevStep} = this.props
 
     return (
       <div className='wrapper'>
@@ -53,15 +42,12 @@ export class PrivacyDetails extends Component {
         </div>
        
         <br/>
-        <button id='btn-next' onClick={this.continue}>Next</button>
+        <button id='btn-next' onClick={nextStep}>Next</button>
         <br/>
-        <button id='btn-back' onClick={this.previous}>Back</button>
-   
-        </div>    
-    </div>         
-      
-    )
-  }
+        <button id='btn-back' onClick={prevStep}>Back</button>
+      </div>    
+    </div>            
+  )}
 }
 
 

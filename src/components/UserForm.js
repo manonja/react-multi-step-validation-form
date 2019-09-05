@@ -60,7 +60,6 @@ export class UserForm extends Component {
       default:
         break;
     }
-
     return this.setState({ formErrors, [name]: value },  () => console.log(this.state));
   }
 
@@ -69,7 +68,6 @@ export class UserForm extends Component {
     this.setState({ ...this.state, [name]: e.target.checked})
   }
 
-
   render() {
     const { step, name, role, email, password, formErrors } = this.state
     const values = { name, role, email, password, formErrors }
@@ -77,21 +75,16 @@ export class UserForm extends Component {
     // eslint-disable-next-line default-case
     switch(step) {
       case Constants.LOGIN_PAGE: 
-      return (
-
-        <FormUserDetails 
-          step = {step}
-          nextStep = {this.nextStep}
-          handleSubmit = {handleSubmit}
-          handleChange = {handleChange}
-          values = {values}
-
-        />
-      )
+        return (
+          <FormUserDetails 
+            nextStep = {this.nextStep}
+            handleChange = {handleChange}
+            values = {values}
+          />
+        )
       case Constants.PRIVACY_PAGE:
         return (
           <PrivacyDetails 
-            step = {step}
             nextStep = {nextStep}
             prevStep = {prevStep}
             handlePrivacy = {handlePrivacy}
@@ -101,9 +94,7 @@ export class UserForm extends Component {
         return (
           <div>
           { console.log(JSON.stringify(this.state, 0, 2)) }
-          <Success
-            step = {step}
-          />
+          <Success/>
           </div>
         )
     } 

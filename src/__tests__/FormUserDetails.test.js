@@ -1,30 +1,59 @@
 
 import React from 'react';
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
+import { shallow, mount } from 'enzyme';
 import FormUserDetails from '../components/FormUserDetails';
 
 let wrapper;
 
 beforeEach(() => {
-    // props = createTestProps();
-    wrapper = shallow(<FormUserDetails/> );
-    debugger
-});
-
-describe('<ForUserDetails /> rendering', () => {
-    it('should render a <form /> to type the informations', () => {
-        expect(wrapper.find('.wrapper')).to.have.lengthOf(1);
+    wrapper = shallow(
+      <FormUserDetails 
+          values={{name: '', role: '', email: '', password: '', formErrors: { name: '', role: '', email: '', password: ''}}} 
+          handleChange={jest.fn()} 
+          nextStep={jest.fn()} 
+      />
+      )
     });
 
+describe('<ForUserDetails /> rendering', () => {
+
+    it('ForUserDetails: renders correctly', () => {
+        const tree = renderer.create(
+            <FormUserDetails 
+                values={{name: '', role: '', email: '', password: '', formErrors: { name: '', role: '', email: '', password: ''}}} 
+                handleChange={() => {}} 
+                nextStep={() => {}} 
+            />).toJSON() 
+        
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('renders without crashing', () => {
+        expect(wrapper)
+    });
+  
+    it('should render a <form /> to type the informations', () => {
+        expect(wrapper.find('form').length).toEqual(1);      
+    });
 });
 
-// describe('<FormUserDetails /> interactions', () => {
-//     it('should call the onClick function when \'Next\' button is clicked', () => {
-//         const mockedHandleClickAddComment = jest.fn()
-//         wrapper.instance().handleClickAddComment = mockedHandleClickAddComment
-//         wrapper.find('.btn-next').first().props().onClick()
-//        expect(mockedHandleClickAddComment).toHaveBeenCalledTimes(1)
-//     });
+describe('<FormUserDetails /> interactions', () => {
+
+    it('should call the onClick function when \'Next\' button is clicked', () => { 
+        const nextStep = jest.fn();
+        const handleChange = jest.fn();
+        const wrapper = mount(
+            <FormUserDetails 
+                values={{name: '', role: '', email: '', password: '', formErrors: { name: '', role: '', email: '', password: ''}}} 
+                handleChange={jest.fn()} 
+                nextStep={nextStep}
+            />
+        );
+        wrapper.find('button').at(0).simulate('click');
+        expect(nextStep).toHaveBeenCalled();
+    });
+
 
 //     it('should change the state name when the onChange function of the input is invoked', () => {
 //         wrapper.find('#input-form-name').simulate('change',
@@ -53,5 +82,6 @@ describe('<ForUserDetails /> rendering', () => {
 //         );
 //         expect(wrapper.state('password')).toEqual('New password')
 //     });
-// });
+});
+
 

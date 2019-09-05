@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PrivacyDetails /> rendering PrivacyDetails: renders correctly 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="form-wrapper"
+  >
+    <div
+      className="page-detail"
+    >
+      <p
+        className="alignleft user"
+      >
+        User Details
+      </p>
+      <h3
+        className="aligncenter privacy"
+      >
+        Privacy
+      </h3>
+      <p
+        className="alignright done"
+      >
+        Done
+      </p>
+    </div>
+    <div
+      className="privacy-options"
+    >
+      <div>
+        <input
+          type="checkbox"
+          value="comTrayProduct"
+        />
+        <label
+          htmlFor="comTrayProduct"
+          id="label-txt"
+        >
+          Receive updates about Tray.io product by email
+        </label>
+      </div>
+      <br />
+      <div>
+        <input
+          checked=""
+          type="checkbox"
+          value="comOtherProducts"
+        />
+        <label
+          htmlFor="comOtherProducts"
+          id="label-txt"
+        >
+          Receive communication by email for other products created by the Tray.io team
+        </label>
+      </div>
+      <br />
+    </div>
+    <br />
+    <button
+      id="btn-next"
+      onClick={[Function]}
+    >
+      Next
+    </button>
+    <br />
+    <button
+      id="btn-back"
+      onClick={[Function]}
+    >
+      Back
+    </button>
+  </div>
+</div>
+`;

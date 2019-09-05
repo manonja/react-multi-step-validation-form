@@ -1,12 +1,6 @@
 import React, { Component } from 'react'
 export class FormUserDetails extends Component {
    
-  // Go to the next page on submit
-  continue = e => {
-    e.preventDefault()
-    this.props.nextStep()
-  }
-
   render() {
     const {values, handleChange, nextStep } = this.props
 
@@ -24,6 +18,7 @@ export class FormUserDetails extends Component {
                 id="input-form-name"
                 className={values.formErrors.name.length > 0 ? "error" : null}
                 placeholder="Name *"
+                autoComplete="current-name"
                 type="text"
                 name="name"
                 noValidate
@@ -37,6 +32,7 @@ export class FormUserDetails extends Component {
               <input
                 id="input-form-role"
                 placeholder="Role"
+                autoComplete="current-role"
                 type="text"
                 name="role"
                 onChange={handleChange}
@@ -47,6 +43,7 @@ export class FormUserDetails extends Component {
                 id="input-form-email"
                 className={values.formErrors.email.length > 0 ? "error" : null}
                 placeholder="Email *"
+                autoComplete="current-email"
                 type="email"
                 name="email"
                 onChange={handleChange}
@@ -60,6 +57,7 @@ export class FormUserDetails extends Component {
                 id="input-form-password"
                 className={values.formErrors.password.length > 0 ? "error" : null}
                 placeholder="Password *"
+                autoComplete="current-password"
                 type="password"
                 name="password"
                 onChange={handleChange}
