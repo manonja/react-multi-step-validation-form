@@ -3,7 +3,7 @@ export const PRIVACY_PAGE = 1
 export const SUCCESS_PAGE = 2
 
 // Validate helper to check if name, email and password are valid 
- export const FORM_VALID = ({ formErrorsMessages, ...rest }) => {
+export const FORM_VALID = ({ formErrorsMessages, ...rest }) => {
   let valid = true;
   // validate form errors is empty
   Object.values(formErrorsMessages).forEach(val => {
@@ -11,7 +11,7 @@ export const SUCCESS_PAGE = 2
   });
   // validate the form with user details is filled out
   Object.values(rest).forEach(val => {
-    val.name === null && val.role === null && val.email === null && val.password === null && (valid = false);
+    val === null && (valid = false);
   });
   // Otherwise the form is valid
   return valid;
