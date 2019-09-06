@@ -43,7 +43,7 @@ Clone the project https://github.com/manonja/trayio-fe-test
 Go to `trayio-fe-test` repository:
 - `npm install` installs package.json 
 - `npm start` app serves on http://localhost:3000
-- `npm test` runs tests
+- `npm test a` runs all tests
 - `npm test u` updates tests
 
 ### How to use?
