@@ -1,7 +1,7 @@
 ### The App
 This App is a proof of concept of a UI that shows a web form to collect some data from a user before signing up for a service.
 It covers three stages: 
-- a page where the user enters his name, role, email and password through a form
+- a page where the user enters his name, role, email and password through a form that must be valid to move on to the next stage
 - a page where the user can choose his privacy preferences 
 - a success page. In this stage, informations about the users are printed in the console. 
 
