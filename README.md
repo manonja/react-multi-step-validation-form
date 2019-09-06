@@ -52,7 +52,7 @@ Enter your user details and make sure the fields are valid! Click next until you
 ### Wishlist V2 (non-exhaustive)
 - Improve form submission: instead of having the validity check on the `next` button, have it on `<form onSubmit={handleSubmit}>`
 - Make layouts components for `<Button/>`, `<Form/>`, `<NavBar/>`, `Checkbox/>`
-- Test if state had been updated correctly
+- Write more tests, especially to test if the state have been updated correctly
 
 ### Author
 Manon Jacquin (https://github.com/manonja)
