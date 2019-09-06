@@ -29,7 +29,6 @@ exports[`<ForUserDetails /> rendering ForUserDetails: renders correctly 1`] = `
     <form
       className="form"
       noValidate={true}
-      onSubmit={[Function]}
     >
       <div
         className="name"

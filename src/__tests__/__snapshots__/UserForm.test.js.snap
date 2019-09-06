@@ -29,7 +29,6 @@ exports[`<UserForm/> Rendering Counter: renders correctly 1`] = `
     <form
       className="form"
       noValidate={true}
-      onSubmit={[Function]}
     >
       <div
         className="name"
