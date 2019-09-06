@@ -16,6 +16,7 @@ The program:
 - Show one page of the form at a time (user details, privacy details, success page)
 - Show the current page position of the form
 - Validate the input fields
+- Can go back to the first page to change infos (infos are still filled in)
 - If there are any validation errors, show an error message in the form and block progress
 - Console.logs the resultant data at the final page
 
