@@ -1,11 +1,15 @@
 ### The App
-Web application that shows a web form to collect some data from a user before signing up for a service.
+This App is a proof of concept of a UI that shows a web form to collect some data from a user before signing up for a service.
+It covers three stages: 
+- a form where the user put his name, role, email and password
+- a page where the user can choose his privacy preferences 
+- a success page. In this stage, informations about the users are printed in the console. 
 
 ### Demo
-[Here!](https://www.youtube.com/watch?v=QzSKVSNKPkY&t=8s) 
+The demo of this app can be found [Here](https://www.youtube.com/watch?v=QzSKVSNKPkY&t=8s) 
 
 ### Deliverables
-The program:
+The deliverables of this proof of concept are the following:
 
 - link to a running web page
 - must run in latest Chrome browser
@@ -23,7 +27,7 @@ The program:
 ### Technical details
 - Front-end built with **React**.
 - Styling with **CSS**.
-- Testing with **Enzyme** and **Jest**. 
+- Testing with **Jest** and **Enzyme**. 
 
 ### Packages installed
 #### UI
