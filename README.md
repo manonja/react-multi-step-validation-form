@@ -12,6 +12,13 @@ The program:
 - can be written in any client side programming language, preferably React and Redux
 - can make use of any existing open source libraries that don't directly address the problem statement 
 
+### Functionalities
+- Show one page of the form at a time (user details, privacy details, success page)
+- Show the current page position of the form
+- Validate the input fields
+- If there are any validation errors, show an error message in the form and block progress
+- Console.logs the resultant data at the final page
+
 ### Technical details
 - Front-end built with **React**.
 - Styling with **CSS**.
@@ -36,10 +43,10 @@ In your terminal, go to `tray-fe-test`
 - run `npm install` to install all the dependencies
 - `npm start` to start the app on http://localhost:3000
 - `npm test` to run the tests
+- `npm test u` to update tests
 
 ### How to use?
 Enter your user details and make sure the fields are valid! Click next until you are done with the signing up process. 
-
 
 ### Author
 Manon Jacquin (https://github.com/manonja)
