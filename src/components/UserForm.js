@@ -22,11 +22,10 @@ export class UserForm extends Component {
     comOtherProducts: false
   };
 
-  // Proceed to the next step and block is invalid form 
+  // Proceed to the next step  
   nextStep = (e) => {
     e.preventDefault()
     const { step } = this.state
-
     if (Constants.FORM_VALID(this.state)) {
       this.setState({
         step: step + 1
@@ -77,7 +76,7 @@ export class UserForm extends Component {
   render() {
     const { step, name, role, email, password, formErrorsMessages } = this.state
     const values = { name, role, email, password, formErrorsMessages }
-    const { handleChange, handlePrivacy, nextStep, prevStep, handleSubmit} = this
+    const { handleChange, handlePrivacy, nextStep, prevStep} = this
     // eslint-disable-next-line default-case
     switch(step) {
       case Constants.LOGIN_PAGE: 
@@ -86,7 +85,6 @@ export class UserForm extends Component {
             nextStep = {this.nextStep}
             handleChange = {handleChange}
             values = {values}
-            handleSubmit = {handleSubmit}
           />
         )
       case Constants.PRIVACY_PAGE:
@@ -100,13 +98,13 @@ export class UserForm extends Component {
       case Constants.SUCCESS_PAGE:
         return (
           <div>
-          { console.log(`
-            --SUBMITTING--
-            ${JSON.stringify(this.state, 0, 2)}`) 
-          }
-          <Success
-            prevStep = {prevStep}
-          />
+            { console.log(`
+              --SUBMITTING--
+              ${JSON.stringify(this.state, 0, 2)}`) 
+            }
+            <Success
+              prevStep = {prevStep}
+            />
           </div>
         )
     } 

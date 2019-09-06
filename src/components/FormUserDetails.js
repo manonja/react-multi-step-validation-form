@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FormUserDetails = ( {values, handleChange, nextStep, handleSubmit} ) => {
+const FormUserDetails = ( {values, handleChange, nextStep} ) => {
 
   return (
     <div className="wrapper">

@@ -12,7 +12,6 @@ beforeEach(() => {
           values={{name: '', role: '', email: '', password: '', formErrorsMessages: { name: '', role: '', email: '', password: ''}}} 
           handleChange={() => {}} 
           nextStep={() => {}} 
-          handleSubmit = {() => {}}
       />
     )
 });
@@ -25,7 +24,6 @@ describe('<ForUserDetails /> rendering', () => {
                 values={{name: '', role: '', email: '', password: '', formErrorsMessages: { name: '', role: '', email: '', password: ''}}} 
                 handleChange={() => {}} 
                 nextStep={() => {}} 
-                handleSubmit = {() => {}}
             />).toJSON() 
         
         expect(tree).toMatchSnapshot();
@@ -52,7 +50,6 @@ describe('<FormUserDetails /> interactions', () => {
                 values={{name: '', role: '', email: '', password: '', formErrorsMessages: { name: '', role: '', email: '', password: ''}}} 
                 handleChange={handleChange} 
                 nextStep={nextStep}
-                handleSubmit = {handleSubmit}
             />
         );
         wrapper.find('button').at(0).simulate('click');
