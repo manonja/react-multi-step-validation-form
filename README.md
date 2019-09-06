@@ -46,6 +46,10 @@ Go to `tray-fe-test` repository:
 - `npm test` runs tests
 - `npm test u` updates tests
 
+### Wishlist V2 (non-exhaustive)
+- Improve form submission: instead of having the validity check on the `next` button, have it on `<form onSubmit={handleSubmit}>`
+- Test if state had been updated correctly
+
 ### How to use?
 Enter your user details and make sure the fields are valid! Click next until you are done with the signing up process. 
 
