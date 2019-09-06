@@ -40,11 +40,11 @@ The program:
 ### Instructions
 Clone the project https://github.com/manonja/trayio-fe-test
 
-In your terminal, go to `tray-fe-test`
-- run `npm install` to install all the dependencies
-- `npm start` to start the app on http://localhost:3000
-- `npm test` to run the tests
-- `npm test u` to update tests
+Go to `tray-fe-test` repository:
+- `npm install` installs package.json 
+- `npm start` app serves on http://localhost:3000
+- `npm test` runs tests
+- `npm test u` updates tests
 
 ### How to use?
 Enter your user details and make sure the fields are valid! Click next until you are done with the signing up process. 
