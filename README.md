@@ -40,7 +40,7 @@ The program:
 ### Instructions
 Clone the project https://github.com/manonja/trayio-fe-test
 
-Go to `tray-fe-test` repository:
+Go to `trayio-fe-test` repository:
 - `npm install` installs package.json 
 - `npm start` app serves on http://localhost:3000
 - `npm test` runs tests
