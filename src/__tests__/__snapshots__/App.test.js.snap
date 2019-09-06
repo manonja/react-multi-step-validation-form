@@ -31,6 +31,8 @@ exports[`<App/> Rendering Counter: renders correctly 1`] = `
       </div>
       <form
         className="form"
+        noValidate={true}
+        onSubmit={[Function]}
       >
         <div
           className="name"
@@ -38,6 +40,7 @@ exports[`<App/> Rendering Counter: renders correctly 1`] = `
           <input
             autoComplete="current-name"
             className={null}
+            defaultValue={null}
             id="input-form-name"
             name="name"
             noValidate={true}
@@ -51,6 +54,7 @@ exports[`<App/> Rendering Counter: renders correctly 1`] = `
         >
           <input
             autoComplete="current-role"
+            defaultValue={null}
             id="input-form-role"
             name="role"
             onChange={[Function]}
@@ -64,6 +68,7 @@ exports[`<App/> Rendering Counter: renders correctly 1`] = `
           <input
             autoComplete="current-email"
             className={null}
+            defaultValue={null}
             id="input-form-email"
             name="email"
             onChange={[Function]}
@@ -77,6 +82,7 @@ exports[`<App/> Rendering Counter: renders correctly 1`] = `
           <input
             autoComplete="current-password"
             className={null}
+            defaultValue={null}
             id="input-form-password"
             name="password"
             onChange={[Function]}
@@ -84,13 +90,14 @@ exports[`<App/> Rendering Counter: renders correctly 1`] = `
             type="password"
           />
         </div>
+        <button
+          id="btn-next"
+          onClick={[Function]}
+          type="submit"
+        >
+          Next
+        </button>
       </form>
-      <button
-        id="btn-next"
-        onClick={[Function]}
-      >
-        Next
-      </button>
       <br />
       <small>
         <i>

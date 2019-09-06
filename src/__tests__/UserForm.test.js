@@ -8,7 +8,7 @@ let wrapper;
 
 beforeEach(() => {
   wrapper = shallow(<UserForm/>)
-})
+});
 
 describe('<UserForm/> Rendering', () => {
   it('Counter: renders correctly', () => {
@@ -31,4 +31,4 @@ describe('<UserForm/> Rendering', () => {
   it('should render a <Success> component', () => {
     expect(wrapper.find('Success').length === 1)   
   });
-})
+});

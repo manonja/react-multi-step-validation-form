@@ -15,8 +15,8 @@ beforeEach(() => {
       nextStep={() => {}} 
       prevStep={() => {}}
     />
-    )
-})
+  )
+});
 
 describe('<PrivacyDetails /> rendering', () => {
   it('PrivacyDetails: renders correctly', () => {
@@ -45,21 +45,3 @@ describe('<PrivacyDetails /> rendering', () => {
   });
 });
 
-// describe('<PrivacyDetails /> interactions', () => {
-
-//   it('should call the onClick function when \'Next\' button is clicked', () => { 
-//       const nextStep = jest.fn();
-//       const prevStep = jest.fn();
-//       const wrapper = mount(
-//           <PrivacyDetails 
-//             handlePrivacy={({}) => {}} 
-//             comTrayProducts=''
-//             comOtherProducts=''
-//             nextStep={nextStep} 
-//             prevStep={prevStep}
-//           />
-//       );
-//       wrapper.find('button').at[0].simulate('click');
-//       expect(nextStep).toHaveBeenCalled();
-//   });
-// });

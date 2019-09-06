@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import UserForm from './components/UserForm'
+import UserForm from './components/UserForm';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <UserForm/>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,7 +1,7 @@
-import React from 'react'
-import { FaRegThumbsUp } from 'react-icons/fa'
+import React from 'react';
+import { FaRegThumbsUp } from 'react-icons/fa';
 
-function Success() {
+const Success = () => {
   return (
     <div className='wrapper'>
       <div className='form-wrapper'>
@@ -15,8 +15,8 @@ function Success() {
       </div>
     </div> 
   )
-}
+};
 
-export default Success
+export default Success;
 
 

@@ -17,6 +17,5 @@ describe('<Success /> rendering', () => {
 
   it('renders a react icon', () => {
     shallow(<FaRegThumbsUp/>)
-  });
-  
+  }); 
 });
