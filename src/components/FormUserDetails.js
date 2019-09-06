@@ -10,7 +10,7 @@ const FormUserDetails = ( {values, handleChange, nextStep, handleSubmit} ) => {
           <p className="aligncenter">Privacy</p>
           <p className="alignright">Done</p>
         </div>
-        <form onSubmit={handleSubmit} noValidate className="form">
+        <form noValidate className="form">
           <div className="name">
             <input
               id="input-form-name"
@@ -68,7 +68,13 @@ const FormUserDetails = ( {values, handleChange, nextStep, handleSubmit} ) => {
               <span className="errorMessage">{values.formErrorsMessages.password}</span>
             )}
           </div>
-          <button type="submit" id='btn-next' onClick={nextStep}>Next</button>
+          <button 
+            type="submit" 
+            id='btn-next' 
+            onClick={nextStep}
+          >
+            Next
+          </button>
         </form>
         <br/>
         <small><i>Fields marked with * are required</i></small>
