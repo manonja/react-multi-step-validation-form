@@ -50,7 +50,7 @@ Go to `trayio-fe-test` repository:
 Enter your user details and make sure the fields are valid! Click next until you are done with the signing up process. 
 
 ### Wishlist V2 (non-exhaustive)
-- Improve form submission: instead of having the validity check on the `next` button, have it on `<form onSubmit={handleSubmit}>`
+- Improve form submission: instead of having the validity check on the `next` button, have it on `<form onSubmit={handleSubmit}>` for some reasons onSubmit was not triggered. 
 - Make layouts components for `<Button/>`, `<Form/>`, `<NavBar/>`, `Checkbox/>`
 - Write more tests, especially to test if the state have been updated correctly
 
