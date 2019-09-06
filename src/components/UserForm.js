@@ -18,44 +18,31 @@ export class UserForm extends Component {
       email: "",
       password: ""
     },
-    isFormValid: false,
     comTrayProduct: false,
     comOtherProducts: false
   };
 
-  // Proceed to the next step on submit 
+  // Proceed to the next step and block is invalid form 
   nextStep = (e) => {
     e.preventDefault()
     const { step } = this.state
-    this.setState({
-      step: step + 1
-    })
+
+    if (Constants.FORM_VALID(this.state)) {
+      this.setState({
+        step: step + 1
+      })
+    } else {
+      alert("FORM INVALID");
+    }
   };
 
-  // Proceed to the previous step on back 
+  // Proceed to the previous step on back button 
   prevStep = (e) => {
     e.preventDefault()
     const { step } = this.state
     this.setState({
       step: step - 1
     })
-  };
-
-  // Handle form submission
-  handleSubmit = e => {
-    e.preventDefault();
-
-    if (Constants.FORM_VALID(this.state)) {
-      console.log(`
-        --SUBMITTING--
-        Name: ${this.state.name}
-        Role: ${this.state.role}
-        Email: ${this.state.email}
-        Password: ${this.state.password}
-      `);
-    } else {
-      console.error("FORM INVALID");
-    }
   };
 
   // Handle user details with validation
@@ -79,7 +66,7 @@ export class UserForm extends Component {
       default:
         break;
     }   
-    this.setState({ formErrorsMessages, [name]: value },  () => console.log(this.state));
+    this.setState({ formErrorsMessages, [name]: value });
   };
 
   // Handle user privacy details
@@ -113,7 +100,10 @@ export class UserForm extends Component {
       case Constants.SUCCESS_PAGE:
         return (
           <div>
-          { console.log(JSON.stringify(this.state, 0, 2)) }
+          { console.log(`
+            --SUBMITTING--
+            ${JSON.stringify(this.state, 0, 2)}`) 
+          }
           <Success
             prevStep = {prevStep}
           />
